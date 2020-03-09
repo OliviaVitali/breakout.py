@@ -6,7 +6,9 @@ import sys
 
 class Overlay(pygame.sprite.Sprite):
     def __init__(self):
-        pygame.sprite.Sprite.__init__(self)
+        # Equivalent statements:
+        #pygame.sprite.Sprite.__init__(self)
+        super(pygame.sprite.Sprite, self).__init__()
         self.image = pygame.Surface((800, 20))
         #self.image.fill((0, 0, 0))
         self.rect = self.image.get_rect()
